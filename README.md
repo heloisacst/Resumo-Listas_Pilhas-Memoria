@@ -34,7 +34,9 @@ void *malloc(size_t size)
 <p>&nbsp &nbsp &nbspNa alocação automática, por padrão (<em>default</em>), as variáveis locais são alocadas automaticamente na pilha de execução do programa (<em>stack</em>) em cada chamada de função e sendo descartada quando a mesma se encerra. O que pode ocorrer neste tipo de alocação é que, como a pilha de execução geralmente é pequena, quando aloca-se variáveis locais muito grandes, pode resultar em erros. Para isso, é interessante nestes casos que seja utilizado variáveis estáticas ou dinâmicas.</p>
 <p>&nbsp &nbsp &nbspJá na alocação dinâmica, é solicitado explicitamente à áreas da memória do Sistema Operacional no qual, quando não estiver mais sendo utilizado, é liberado o espaço ou quando o programa se encerrar. Seu uso é um dos mais comuns visto que, otimiza programas deixando-os mais rápidos e utiliza menos espaço da memória. As alocações dinâmicas são destinadas à uma área da memória chamada heap. Neste modo, é utilizado a chamada malloc (<em>Memory Allocation</em>) para realizar a alocação no qual disponibiliza uma área de acordo com o tamanho dos <em>bytes</em> retornando um ponteiro para o início com o endereço do bloco alocado.</p>
 
-'void *malloc(size_t numero_de_bytes);'
+```
+void *malloc(size_t numero_de_bytes);
+```
 
 <p>&nbsp &nbsp &nbspQuando é retornado este ponteiro, o mesmo não retorna um tipo de dado específico e com isso, é necessário que em vez de declarar como void, é importante que essa tipagem seja definida na função.</p>
 <p>&nbsp &nbsp &nbspTambém, é necessário a utilização da função free(), para liberação do que já foi alocado previamente. Uma boa prática é a utilização do sizeof pois, como variáveis possuem diferentes valores, com esta função a alocação será precisa de acordo com a máquina que está compilando o programa.</p>
